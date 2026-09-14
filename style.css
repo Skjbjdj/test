@@ -1,0 +1,376 @@
+/* ========== СБРОС И БАЗА ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: #f4f6fa;
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== ШАПКА ========== */
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6580 100%);
+    color: #fff;
+    padding: 60px 0 50px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header__title {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.header__subtitle {
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+/* ========== ОСНОВНОЙ КОНТЕНТ ========== */
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    position: relative;
+    padding-left: 18px;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 5px;
+    background: #e67e22;
+    border-radius: 3px;
+}
+
+/* ========== БЛОК ПРОФИЛЯ ========== */
+.profile {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+.profile__photo {
+    text-align: center;
+}
+
+.profile__img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile__img:hover {
+    transform: scale(1.03);
+}
+
+.profile__photo-hint {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 12px;
+    line-height: 1.4;
+}
+
+.profile__info p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+.facts {
+    list-style: none;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.facts li {
+    background: #f0f3f8;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.25s ease;
+}
+
+.facts li:hover {
+    background: #e3e9f3;
+}
+
+.facts span {
+    font-size: 1.2rem;
+}
+
+/* ========== МЕЧТА И РЕАЛЬНОСТЬ ========== */
+.dreams {
+    margin-bottom: 50px;
+}
+
+.dreams__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.dreams__card {
+    background: #fff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.dreams__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.dreams__card--dream {
+    border-top: 5px solid #e74c3c;
+}
+
+.dreams__card--real {
+    border-top: 5px solid #27ae60;
+}
+
+.dreams__badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.dreams__card--dream .dreams__badge {
+    background: #fdecea;
+    color: #c0392b;
+}
+
+.dreams__card--real .dreams__badge {
+    background: #eafaf1;
+    color: #1e8449;
+}
+
+.dreams__card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+.dreams__card p {
+    color: #566573;
+    margin-bottom: 16px;
+    font-size: 0.98rem;
+}
+
+.dreams__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.92rem;
+    color: #34495e;
+}
+
+/* ========== ССЫЛКИ ========== */
+.links {
+    margin-bottom: 50px;
+}
+
+.links__intro {
+    margin-bottom: 25px;
+    color: #566573;
+}
+
+.links__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.link-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    border-color: #e67e22;
+    box-shadow: 0 10px 24px rgba(230, 126, 34, 0.18);
+}
+
+.link-card__icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.link-card__title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.link-card__desc {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.links__hint {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    background: #fdf3e7;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-left: 4px solid #e67e22;
+}
+
+/* ========== ПОЧЕМУ НИ РХТУ ========== */
+.why {
+    margin-bottom: 20px;
+}
+
+.why__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.why__card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #e67e22;
+    transition: transform 0.3s ease;
+}
+
+.why__card:hover {
+    transform: translateY(-4px);
+}
+
+.why__card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.why__card p {
+    color: #566573;
+    font-size: 0.95rem;
+}
+
+/* ========== ПОДВАЛ ========== */
+.footer {
+    background: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 22px 0;
+    font-size: 0.9rem;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 800px) {
+    .header__title { font-size: 2rem; }
+
+    .profile {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .facts {
+        grid-template-columns: 1fr;
+    }
+
+    .dreams__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+code {
+    background: #eef1f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #c0392b;
+}
+
+
+
+
+288
+256
+1081
+4
+64
+64
+4
+10
+4
+HBDA
+240
+HBFA
+248
+427
+2796202
+HCEA
+9
+http
+13
+ЕЗБГДВЖА
+ECFA
+300
+36000
+20
+150
